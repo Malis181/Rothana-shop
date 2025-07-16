@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessert Menu-R's shop</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family:sans-serif;
+        background-color: rgb(233, 202, 156);
+        
+    }
+    header{
+        background-color: #7f4d0bc2;
+        color: white;
+        padding: 15px 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    nav{
+        background-color: #c48c48;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border-radius: 5px;
+        justify-content: center;
+        gap: 40px;
+        display: flex;
+
+    }
+    nav a{
+        color: #fffdfd;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    nav a:hover{
+        background-color: #7f4d0bc2;
+        color: #fffdfd;
+    }
+    main{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h2{
+        text-align: center;
+        margin-top: 30px;
+    }
+    .product-grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+        gap: 20px;
+    }
+    .product-card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(254, 254, 254);
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgb(0, 0, 0, 1);
+        padding: 15px;
+        transition: transform 0.2s ease-in-out;
+    }
+.product-card img{
+    
+    width: 100%;
+    border-radius: 10px;
+    max-height: 180px;
+    object-fit: cover;
+
+}
+.product-card h3{
+    margin: 10px 0;
+    font-size: 20px;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.controls button{
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.buy-btn{
+    background-color: rgb(24, 188, 54);
+    color: #fffdfd;
+    margin-top: 10px;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+
+}
+.buy-btn:hover{
+    background-color: rgb(22, 155, 62);
+}
+
+</style>
+<body>
+    <header>
+        <div>
+            <h1>Dessert Menu</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="bread.html">bread</a>
+                <a href="drink.html">drink</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>  
+        <h2></h2>
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/35/9a/57/359a5701e0ce0b6c79a67d94f42312a8.jpg" alt="">
+                <h3>Tiramisu</h3>
+                <span>4.2$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/de/a0/1a/dea01a87b4e0389b06ea43a19e6af30c.jpg" alt="">
+                <h3>Strawberry Cheese Cake</h3>
+                <span>4.5$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/ae/05/3d/ae053d67fdc0ff2fef38e86710170426.jpg" alt="">
+                <h3>Brownie</h3>
+                <span>2$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/96/5b/a5/965ba58d9f8e20f264dc681ec8a05f19.jpg" alt="">
+                <h3>Egg Tart</h3>
+                <span>1.5$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/9a/f3/88/9af388e91174d644619bbb70c4fdf6be.jpg" alt="">
+                <h3>Churros</h3>
+                <span>5$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/1e/20/43/1e204304b99a53526eab4447ad05dc9a.jpg" alt="">
+                <h3>Chocolate Cake</h3>
+                <span>15$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/39/94/ae/3994ae82018f624dc7fbc42f8abf3426.jpg" alt="">
+                <h3>Cookie</h3>
+                <span>1.5$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            <div class="product-card">
+                <img src="https://i.pinimg.com/736x/a8/3d/40/a83d4080d0b8a7bd6c14e9f4c34500c7.jpg" alt="">
+                <h3>Donut Set</h3>
+                <span>6$</span>
+                <div class="controls">
+                    <button onclick="decrease(this)">-</button>
+                    <span>0</span>
+                    <button onclick="increase(this)">+</button>
+                </div>
+                <button class="buy-btn">Buy</button>
+            </div>
+            
+        </section>
+    </main>
+    
+  <footer>
+    &copy; 2024 R's Shop
+  </footer>
+   <script>
+    function increase(button) {
+      const span = button.previousElementSibling;
+      let count = parseInt(span.textContent);
+      span.textContent = count + 1;
+    }
+
+    function decrease(button) {
+      const span = button.nextElementSibling;
+      let count = parseInt(span.textContent);
+      if (count > 0) {
+        span.textContent = count - 1;
+      }
+    }
+    
+  </script>
+</body>
+</html>

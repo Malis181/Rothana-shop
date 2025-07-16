@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project 8-R's shop </title>
+  <style>
+    
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(169, 139, 104, 0.671);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    
+    header {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 5vw;
+      color: white;
+      font-size: larger;
+      background-color: black;
+      background-image: url(https://png.pngtree.com/background/20230518/original/pngtree-bakery-with-many-different-types-of-items-behind-glass-picture-image_2645229.jpg);
+      background-size: cover;
+      background-position: center;
+      border-radius: 2px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+
+    nav a {
+      margin: 10px;
+      color: aliceblue;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+   
+    main {
+      padding: 10px 10px 10px 10px;
+      flex: 1; 
+    }
+
+    main h2 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-top: 50px;
+      text-align: center;
+      color: rgba(128, 89, 38, 0.894);
+    }
+    
+    .projec-card {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 60px 10px 50px 10px;
+    }
+
+    .projec-card h1,
+    .projec-card p {
+      text-align: center;
+    }
+
+    .box {
+      padding: 20px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: none; 
+      background-color: white;
+    }
+
+    .box img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    a.box-link {
+      display: block;
+      border: 1px solid rgb(210, 201, 201);
+      background-color: white;
+      color: inherit;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    a.box-link:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-form {
+      max-width: 400px;
+      width: 90vw;
+      margin: 150px auto;
+      padding: 30px;
+      background-color: white;
+      border-radius: 20px;
+      border: 1px solid #adaaaa;
+      box-sizing: border-box;
+    }
+
+    .contact-form h3 {
+      margin-left: 30px;
+    }
+
+    hr {
+      width: 30%;
+      margin-left: 30px;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      margin-left: 20px;
+      margin-bottom: 5px;
+      font-weight: 0;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 0 auto 10px;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #4bb94f;
+      cursor: pointer;
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      margin-left: 20px;
+      font-size: 1rem;
+      margin-top: 30px;
+    }
+
+    footer {
+      width: 100%;
+      padding: 10px 5vw;
+      background-color: rgba(126, 76, 7, 0.743);
+      color: white;
+      text-align: center;
+      box-sizing: border-box;
+      margin-top: auto; 
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 15px 3vw;
+      }
+
+      nav {
+        justify-content: center;
+        padding: 10px;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      .box img {
+        height: auto;
+      }
+
+      .contact-form {
+        width: 95vw;
+        padding: 20px;
+      }
+
+      footer {
+        margin-top: 50px;
+        padding: 15px 3vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>R's shop</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <h2>Our Goodie</h2>
+    <section class="projec-card">
+      <a href="bread.html" class="box-link">
+        <div class="box">
+          <img src="https://s3.amazonaws.com/kubaiksfamilyfoods/DepartmentImages/rsadp_bakery_web.jpg" alt="bread" />
+          <h1>Bread</h1>
+          <p>Freshly baked breads every day</p>
+        </div>
+      </a>
+
+      <a href="drink.html" class="box-link">
+        <div class="box">
+          <img src="https://assets-pergikuliner.com/a90VbGPvKZ2CH5pTxsO1b3rgCxs=/fit-in/1366x768/smart/filters:no_upscale()/https://assets-pergikuliner.com/uploads/image/picture/2233580/picture-1622098211.jpg" alt="drink" />
+          <h1>Drink</h1>
+          <p>Delicious hot and cold beverages</p>
+        </div>
+      </a>
+
+      <a href="dessert.html" class="box-link">
+        <div class="box">
+          <img src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/10/06152543/Untitled-design.jpg" alt="cake" />
+          <h1>Dessert</h1>
+          <p>Choose from our selection of amazing homemade desserts</p>
+        </div>
+      </a>
+    </section>
+  </main>
+  <div id="contact">
+    <form class="contact-form">
+      <h3>Contact Us</h3>
+      <hr />
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required />
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required />
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <footer>
+    <p>&copy; 2024 R's Shop</p>
+  </footer>
+</body>
+</html>
